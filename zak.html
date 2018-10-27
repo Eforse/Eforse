@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/css.css">
 	<title>Пицца на заказ</title>
+	<link rel="icon" type="image/ico" href="favicon.ico" />
 
 </head>
 <body>
@@ -22,15 +23,16 @@
 				<form action="">
 				<li class="zakli">
 					<p class="choose"> Пицца
-					<select name="list" id="">
-						<option>Пеперони</option>
-						<option value="">Гавайская</option>
-						<option value="">Сырная</option>
-						<option value="">Маргарита</option>
-						<option value="">Морская</option>
-						<option value="">Мясная</option>
-						<option value="">Итальянская</option>
-						<option value="">Мексиканская</option>
+					<select name="list" id="myselect" required="">
+						<option value="">-------------</option>
+						<option value="349 ₽">Пеперони</option>
+						<option value="349 ₽">Гавайская</option>
+						<option value="299 ₽">Сырная</option>
+						<option value="299 ₽">Маргарита</option>
+						<option value="399 ₽">Морская</option>
+						<option value="399 ₽">Мясная</option>
+						<option value="349 ₽">Итальянская</option>
+						<option value="399 ₽">Мексиканская</option>
 					</select> 
 				</p>
 					<input required type="text" name="" placeholder="Имя" id="">
@@ -54,13 +56,19 @@
 				</li>
 
 				<li class="zakli">
-					<input required  type="number" name="" placeholder="Дом" id="">
-					<input type="number" name="" placeholder="Квартира" id="">
-					<button class="check">Заказать</button>	
+					<input required  type="number" name="" placeholder="Дом" id="house">
+					<input type="number" name="" placeholder="Квартира" id="house">
+					<button class="check">Заказать</button>
 					
 				</li>
 			</form>
 			</ul>
+			<p id="info">Стоимость заказа составляет:</p>
+					<script type="text/javascript">
+    document.getElementById("myselect").addEventListener("change", function(){
+      document.getElementById('info').innerHTML = "Стоимость заказа составляет: "+this.value;   
+    }); </script>
+    <p class="info"> Оплата наличными при доставке</p>
 
 		</div>
 	</div>
