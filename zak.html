@@ -5,15 +5,18 @@
 	<link rel="stylesheet" href="css/css.css">
 	<title>Пицца на заказ</title>
 	<link rel="icon" type="image/ico" href="favicon.ico" />
-
+	<script type="text/javascript" src="jq/jQuery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<div class="head">
-		<p class="pizza">Pizza</p>
+		<p class="pizza">Eforse Pizza</p>
 		<nav class="menu">
 			<a class="link" href="index.html">Меню</a>
-			<a class="link" href="zak.html">Заказать</a>
-	  </nav>
+			<a class="link" href="zak.html">Заказ</a>
+			<a class="link" href="about.html">О нас</a>
+	  </nav> 
+	  <p class="pinfo">Доставка пиццы по Краснодону</p>
 	</div>
 
 	<div class="midzak">
@@ -25,15 +28,16 @@
 					<p class="choose"> Пицца
 					<select name="list" id="myselect" required="">
 						<option value="">-------------</option>
-						<option value="349 ₽">Пеперони</option>
-						<option value="349 ₽">Гавайская</option>
-						<option value="299 ₽">Сырная</option>
-						<option value="299 ₽">Маргарита</option>
-						<option value="399 ₽">Морская</option>
-						<option value="399 ₽">Мясная</option>
-						<option value="349 ₽">Итальянская</option>
-						<option value="399 ₽">Мексиканская</option>
-					</select> 
+						<option value="349">Пеперони</option>
+						<option value="349">Гавайская</option>
+						<option value="299">Сырная</option>
+						<option value="299">Маргарита</option>
+						<option value="399">Морская</option>
+						<option value="399">Мясная</option>
+						<option value="349">Итальянская</option>
+						<option value="399">Мексиканская</option>
+					</select>
+					<input id="amount"  required type="number" name="" placeholder="Кол-во" > 
 				</p>
 					<input required type="text" name="" placeholder="Имя" id="">
 				</li>
@@ -56,24 +60,22 @@
 				</li>
 
 				<li class="zakli">
-					<input required  type="number" name="" placeholder="Дом" id="house">
-					<input type="number" name="" placeholder="Квартира" id="house">
+					<input required  type="number" name="" placeholder="Дом" class="house">
+					<input type="number" name="" placeholder="Квартира" class="house">
 					<button class="check">Заказать</button>
 					
 				</li>
 			</form>
 			</ul>
 			<p id="info">Стоимость заказа составляет:</p>
-					<script type="text/javascript">
-    document.getElementById("myselect").addEventListener("change", function(){
-      document.getElementById('info').innerHTML = "Стоимость заказа составляет: "+this.value;   
-    }); </script>
+				
     <p class="info"> Оплата наличными при доставке</p>
 
 		</div>
 	</div>
 
 <div class="footer">
+	<p class="phone"> +380(72)111 31 31</p>
 	<nav class="right">
 			 <ul>
 			 	<li> <a class="social" href="https://www.facebook.com">Facebook</a></li>
@@ -83,7 +85,7 @@
 			 </ul>
 			</nav>
 			<p class="footname">Eforse pizza © 2018</p> 
-			<p class="phone"> +380(72)111 31 31</p>
+			
 </div>
 
 </body>
